@@ -24,6 +24,9 @@ br::selection {
 .night > body {
     background-color: #111;
 }
+.night > .container {
+    color: #ddd;
+}
 
 
 /* NAVBAR */
