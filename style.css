@@ -43,7 +43,7 @@ nav:hover {
 }
 .header {
     margin: 0 auto;
-    width: 1500px;
+    width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +64,7 @@ nav:hover {
     width: 500px;
     text-align: center;
     display: flex;
+    padding-right: 84px;
     justify-content: space-evenly;
 }
 .menu a, .text2 a {                     /* TEXT LINK */
