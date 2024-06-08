@@ -8,6 +8,7 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins';
+    font-size: 17px;
     background-color: #ddd
 }   
 p::selection,
@@ -17,7 +18,8 @@ h3::selection,
 h4::selection,
 a::selection,
 img::selection,
-br::selection {
+br::selection,
+input::selection {
     background-color: #49108B;
     color: #E26EE5;
 }
@@ -27,7 +29,6 @@ br::selection {
 .night > .container {
     color: #ddd;
 }
-
 
 /* START NAVBAR */
 nav {
@@ -61,14 +62,14 @@ nav:hover {
     width: 65px;
     margin-right: 20px;
 }
-.menu {                                 /* MENU */
+.menu {                                  /* MENU */
     width: 500px;
     text-align: center;
     display: flex;
     padding-right: 84px;
     justify-content: space-evenly;
 }
-.menu a, .text2 a, .text a {                     /* TEXT LINK */
+.menu a, .text2 a, .text a {             /* TEXT LINK */
     color: #ddd;
     text-decoration: none;
     font-size: 22px;
@@ -94,13 +95,12 @@ nav:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 120px 0;
+    margin: 150px 0 120px
 }
 .text {                                 /* TEXT ITEM */
     width: 50%;
 }
 .text h1 {
-    border-left: 2px solid black;
     height: fit-content;
     padding-left: 10px;
     margin-bottom: -3px;
@@ -108,7 +108,7 @@ nav:hover {
 .text2 {                                /* OTHER TEXT STYLE */
     margin: 0 auto;
     text-align: center;
-    width: 670px;
+    width: 50%;
 }
 .text2 p {
     font-size: 20px;
@@ -120,8 +120,12 @@ nav:hover {
     text-decoration: underline;
     padding: 0;
 }
+.text2 h1 {
+    margin: 20px auto;
+    width: max-content;
+    padding-left: 10px;
+}
 /* TESTI */
-
 
 /* FOOTER */
 footer {
@@ -133,17 +137,64 @@ footer {
 }
 /* FOOTER */
 
-.pages {
+.arrows {
     display: flex;
     justify-content: space-between;
     font-size: 25px;
     margin-bottom: 30px;
 }
-.pages div > a{
-    border: 2px solid black;
-    border-radius: 10px;
+.arrows .previous *, .arrows .next *{
     text-decoration: none;
     padding: 5px;
     color: white;
     background-color: #734F96;
+    border-radius: 10px;
+    transition: .4s;
+}
+.arrows .previous a:hover, .arrows .next a:hover {
+    background-color: #280659;
+}
+
+.inputForum {
+    text-align: left;
+    padding: 10px;
+    max-width: 100%;
+    user-select: none;
+}
+.inputForum p {
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+.inputForum input, .inputForum button {
+    width: 84%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 15px;
+    background-color:#734F96;
+    max-width: 100%;
+    order: 0;
+    
+}
+.inputForum ::placeholder {
+    color: black;
+    font-size: 15px;
+    max-width: 100%;
+}
+.inputForum button {    
+    height: 55px;
+    padding-left: 5px;
+    width: 11%;
+    order: 1;
+}
+
+.msg p {
+    margin: 12px;
+}
+.msg {
+    max-height: 600px;
+    text-align: justify;
+    overflow: auto;
+    margin-bottom: 60px;
 }
